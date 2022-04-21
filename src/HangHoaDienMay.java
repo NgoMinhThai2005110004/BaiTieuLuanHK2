@@ -1,46 +1,42 @@
 public class HangHoaDienMay extends HangHoa  {
     private int thoiGianBH;
-    private double congXuat;
-    public HangHoaDienMay(){
-
+    private double congSuat;
+    public HangHoaDienMay(int sLTHKK, String tenHH, double donGiaHH, int thoiGianBH, double congXuat) {
+        super(sLTHKK, tenHH, donGiaHH);
+        this.thoiGianBH = thoiGianBH;
+        this.congSuat = congSuat;
     }
-    public int getThoiGianBH(){
+    public HangHoaDienMay(int thoiGianBH, double congSuat) {
+        this.thoiGianBH = thoiGianBH;
+        this.congSuat = congSuat;
+    }
+    public int getThoiGianBH() {
         return thoiGianBH;
     }
-    private void setThoiGianBH(int thoiGianBH){
+    public void setThoiGianBH(int thoiGianBH) {
         if(thoiGianBH > 0){
             this.thoiGianBH = thoiGianBH;
         }
         else{
-            System.out.println("Thoi Gian Bao Hanh Khong Hop Le");
+            System.out.println("Thoi Gian Bao Hanh Khong Dung");
         }
     }
-    public double getCongXuat(){
-        return congXuat;
+    public double getcongSuat() {
+        return congSuat;
     }
-    private void setCongXuat(double congXuat){
-        if(congXuat > 0){
-            this.congXuat = congXuat;
+    public void setcongSuat(double congSuat) {
+        if (congSuat > 0) {
+            this.congSuat = congSuat;
+        } else {
+            System.out.println("Cong Suat Khong Dung");
         }
-        else{
-            System.out.println("Cong Xuat Khong Hop Le");
-        }
     }
-    public HangHoaDienMay( int sLTonKhoH, String tenHH, double donGiaHH, int thoiGianBH, double congXuat) {
-        super( sLTonKhoH, tenHH, donGiaHH);
-        this.thoiGianBH = thoiGianBH;
-        this.congXuat = congXuat;
-    }
-    public HangHoaDienMay(int thoiGianBH, double congXuat) {
-        this.thoiGianBH = thoiGianBH;
-        this.congXuat = congXuat;
-    }
-    
     
     @Override
     public String toString() {
-        return "HangHoaDienMay [congXuat=" + congXuat + ", thoiGianBH=" + thoiGianBH + "]";
+        return super.toString() +"HangHoaDienMay [congSuat=" + congSuat + ", thoiGianBH=" + thoiGianBH + "]";
     }
+
     
 }
 
