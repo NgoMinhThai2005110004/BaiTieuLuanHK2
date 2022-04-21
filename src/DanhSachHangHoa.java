@@ -60,11 +60,14 @@ public class DanhSachHangHoa {
             }
             else{
             System.out.println("Hang hoa khong co");
+            break;
             }
             
         }
         return hangHoa;
     }
+
+    
 
     public void sapXepHangHoa(){
         Collections.sort(ds, new Comparator<HangHoa>() {
@@ -87,7 +90,7 @@ public class DanhSachHangHoa {
         this.hienThiHangHoa();
     }
 
-    public void thongKe(){
+    public void tinhSLHH(){
 
         for (HangHoa hangHoa : ds) {
             if (hangHoa instanceof HangHoaThucPham){
@@ -100,6 +103,10 @@ public class DanhSachHangHoa {
                 this.sLHHSanhSu++;
             }
         }
+        
+    }
+
+    public void thongKe(){
         System.out.println("so Luong Hang Thuc Pham" + sLHHThucPham);
         System.out.println("so Luong Hang Dien May" + sLHHDienMay);
         System.out.println("so Luong Hang Sanh Su" + sLHHSanhSu);

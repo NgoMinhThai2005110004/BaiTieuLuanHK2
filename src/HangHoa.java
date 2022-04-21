@@ -3,7 +3,7 @@ public abstract class HangHoa {
     private String tenHH;
     private double donGiaHH;
 
-    public HangHoa(int sLTHKK, String tenHH, double donGiaHH) {
+    public HangHoa(int maH,int sLTHKK, String tenHH, double donGiaHH) {
         this.maH = maH;
         this.sLTHKK = sLTHKK;
         this.tenHH = tenHH;
@@ -61,7 +61,7 @@ public abstract class HangHoa {
 
     @Override
     public String toString() {
-        return "HangHoa [donGiaHH=" + donGiaHH + ", maH=" + maH + ", sLTonKhoH=" + sLTHKK + ", tenHH=" + tenHH + "]";
+        return  " Ma = " + maH + " \t Don Gia= " + donGiaHH + " \t So Luong Ton Kho= " + sLTHKK + " \t Ten Hang= " + tenHH;
     }
 
     

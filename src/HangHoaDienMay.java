@@ -1,8 +1,9 @@
 public class HangHoaDienMay extends HangHoa  {
     private int thoiGianBH;
     private double congSuat;
-    public HangHoaDienMay(int sLTHKK, String tenHH, double donGiaHH, int thoiGianBH, double congXuat) {
-        super(sLTHKK, tenHH, donGiaHH);
+   
+    public HangHoaDienMay(int maH, int sLTHKK, String tenHH, double donGiaHH, int thoiGianBH, double congSuat) {
+        super(maH, sLTHKK, tenHH, donGiaHH);
         this.thoiGianBH = thoiGianBH;
         this.congSuat = congSuat;
     }
@@ -34,7 +35,7 @@ public class HangHoaDienMay extends HangHoa  {
     
     @Override
     public String toString() {
-        return super.toString() +"HangHoaDienMay [congSuat=" + congSuat + ", thoiGianBH=" + thoiGianBH + "]";
+        return super.toString() +" \t Cong Suat=" + congSuat + " \t Thoi Gian Bao Hanh=" + thoiGianBH;
     }
 
     

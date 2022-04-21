@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.xml.crypto.Data;
@@ -5,8 +6,9 @@ import javax.xml.crypto.Data;
 public class HangHoaSanhSu extends HangHoa{
     private String nhaSX;
     private Date ngayNhapKho;
-    public HangHoaSanhSu(int sLTHKK, String tenHH, double donGiaHH, String nhaSX, Date ngayNhapKho) {
-        super(sLTHKK, tenHH, donGiaHH);
+   
+    public HangHoaSanhSu(int maH, int sLTHKK, String tenHH, double donGiaHH, String nhaSX, Date ngayNhapKho) {
+        super(maH, sLTHKK, tenHH, donGiaHH);
         this.nhaSX = nhaSX;
         this.ngayNhapKho = ngayNhapKho;
     }
@@ -32,7 +34,8 @@ public class HangHoaSanhSu extends HangHoa{
     }
     @Override
     public String toString() {
-        return super.toString()+"HangHoaSanhSu [ngayNhapKho=" + ngayNhapKho + ", nhaSX=" + nhaSX + "]";
+        SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+        return super.toString()+" \t Ngay Nhap Kho =" + df.format(ngayNhapKho) + " \t Nha San Xuat=" + nhaSX ;
     }
     
     

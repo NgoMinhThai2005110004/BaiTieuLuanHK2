@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class HangHoaThucPham extends HangHoa{
@@ -5,10 +6,11 @@ public class HangHoaThucPham extends HangHoa{
     private String nhaCC;
 
     
-    public HangHoaThucPham(int sLTHKK, String tenHH, double donGiaHH, java.util.Date ngaySX2, java.util.Date ngayHH2, String nhaCC) {
-        super(sLTHKK, tenHH, donGiaHH);
-        this.ngaySX = ngaySX2;
-        this.ngayHH = ngayHH2;
+    
+    public HangHoaThucPham(int maH, int sLTHKK, String tenHH, double donGiaHH, Date ngaySX, Date ngayHH, String nhaCC) {
+        super(maH, sLTHKK, tenHH, donGiaHH);
+        this.ngaySX = ngaySX;
+        this.ngayHH = ngayHH;
         this.nhaCC = nhaCC;
     }
     public HangHoaThucPham(Date ngaySX, Date ngayHH, String nhaCC) {
@@ -47,8 +49,10 @@ public class HangHoaThucPham extends HangHoa{
         }
     }
     @Override
+
     public String toString() {
-        return super.toString() +"HangHoaThucPham [ngayHH=" + ngayHH + ", ngaySX=" + ngaySX + ", nhaCC=" + nhaCC + "]";
+        SimpleDateFormat sf = new SimpleDateFormat("dd-MM-yyyy");
+        return super.toString() +" \t Ngay Het Han =" + sf.format(ngayHH) + " \t Ngay San Xuat=" + sf.format(ngaySX) + ", Nha Cung Cap=" + nhaCC;
     }
 
     
